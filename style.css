@@ -1,0 +1,263 @@
+ :root {
+     ---box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+
+ }
+
+ * {
+     margin: 0;
+     box-sizing: border-box;
+
+ }
+
+ body {
+     background-color: rgba(214, 211, 211, 0.836);
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+     min-height: 100vh;
+     margin: 0;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+
+ .container {
+     margin: 30px auto;
+     width: 100vh;
+
+ }
+
+ h1 {
+     letter-spacing: 1px;
+     margin: 0;
+ }
+ 
+ h2{
+    border-bottom: 2px solid #bbb;
+ }
+ h3 {
+     border-bottom: 1px solid #bbb;
+     padding-bottom: 10px;
+     margin: 0 0 10px;
+ }
+
+ h4 {
+     margin: 0;
+     text-transform: uppercase;
+ }
+
+ .inc-exp {
+     background-color: white;
+     box-shadow: var(---box-shadow);
+     padding: 20px;
+     display: flex;
+     justify-content: center;
+     margin: 4px 0;
+ }
+
+ .inc-exp div {
+     flex: 1;
+     text-align: center;
+ }
+
+ .inc-exp div:first-of-type {
+     border-right: 1px solid black;
+ }
+
+ .money {
+     font-size: 5;
+     letter-spacing: 1px;
+     margin: 5px 0;
+     font-weight: 600;
+ }
+
+ #money-plus {
+     color: rgb(28, 134, 28);
+ }
+
+ #money-minus {
+     color: red;
+ }
+
+ label {
+     display: inline-block;
+     margin: 10px 0;
+ }
+
+ input {
+     border: 2px solid #dedede;
+     border-radius: 2px;
+     display: block;
+     font-size: 16px;
+     padding: 10px;
+     width: 100vh;
+ }
+
+ /* .add-trans-btn{
+    cursor: pointer;
+    background-color: #ffb35c;
+    box-shadow: var(---box-shadow);
+    border: 0;
+    display: block;
+    font-size: 16px;
+    margin: 10px 0 30px;
+    padding: 10px;
+    width: 100%;
+} */
+
+ .add-trans-btn,
+ .delete-btn:focus {
+     outline: 0;
+ }
+
+ .list {
+     list-style: none;
+     padding: 0;
+     margin-bottom: 40px;
+
+ }
+
+ .list li {
+     width: 100vh;
+     background-color: white;
+     box-shadow: var(---box-shadow);
+     color: #333;
+     display: flex;
+     justify-content: space-between;
+     position: relative;
+     padding: 10px;
+     margin: 10px 0;
+
+ }
+
+ .list li.plus {
+     border-right: 5px solid rgb(0, 255, 255);
+ }
+
+ .list li.minus {
+     border-right: 5px solid rgb(228, 29, 2);
+ }
+
+ .delete-btn {
+     cursor: pointer;
+     background-color: darkred;
+     border: 0;
+     color: whitesmoke;
+     font-size: 20px;
+     line-height: 20px;
+     padding: 2px 5px;
+     position: absolute;
+     top: 50%;
+     left: 0;
+     transform: translate(-180%, -58%);
+     opacity: 0;
+     transition: opacity 0.3s ease;
+ }
+
+ .list li:hover .delete-btn {
+     opacity: 1;
+ }
+
+ .buttons_container {
+     display: flex;
+     margin-top: 10px;
+ }
+
+ .buttons_container button {
+
+     width: 100%;
+     height: 45px;
+     color: rgb(0, 0, 0);
+     border: none;
+     opacity: 0.9;
+     transition: 0.3s ease-in-out;
+     cursor: pointer;
+ }
+
+ .buttons_container button:hover {
+     opacity: 1;
+     transition: 0.3s ease-in-out;
+ }
+
+ #earnBtn {
+     background-color: rgb(25, 218, 25);
+ }
+
+ #expBtn {
+     background-color: rgb(228, 35, 35);
+ }
+
+ @media only screen and (min-width:1200px) {
+     .container {
+         width: 80vh;
+
+     }
+
+     .list li {
+         width: 80vh;
+     }
+
+     input {
+         width: 80vh;
+     }
+ }
+
+ @media only screen and (min-width:992px) {
+     .container {
+         width: 90vh;
+
+     }
+
+     .list li {
+         width: 90vh;
+     }
+
+     input {
+         width: 90vh;
+     }
+ }
+
+ @media only screen and (min-width: 768) {
+     .container {
+         width: 95vh;
+
+     }
+
+     .list li {
+         width: 95vh;
+     }
+
+     input {
+         width: 95vh;
+     }
+ }
+
+ @media only screen and (max-width: 480px) {
+     .container {
+         width: 90vw;
+         margin: 20px auto;
+     }
+
+     .list li {
+         width: 90vw;
+         flex-direction: column;
+     }
+
+     .list li.delete-btn {
+         top: 10px;
+         left: 10px;
+         transform: translate(0, 0);
+     }
+
+     input {
+         width: 90vw;
+     }
+
+     .buttons_container {
+         flex-direction: column;
+     }
+
+     .buttons_container button {
+         width: 90vw;
+         margin-bottom: 10px;
+     }
+ }
